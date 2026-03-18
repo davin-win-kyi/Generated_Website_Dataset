@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 187 100% 42%;
+    --primary-foreground: 220 25% 5%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 330 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 187 100% 42%;
+
+    --radius: 0.75rem;
+
+    --pulse-glow: 187 100% 50%;
+    --pulse-surface: 220 20% 99%;
+    --pulse-hover: 220 15% 95%;
+    --pulse-success: 152 69% 40%;
+    --pulse-warning: 38 92% 50%;
+    --pulse-online: 152 69% 45%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 10%;
+    --sidebar-primary: 187 100% 42%;
+    --sidebar-primary-foreground: 220 25% 5%;
+    --sidebar-accent: 220 15% 95%;
+    --sidebar-accent-foreground: 220 25% 10%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 187 100% 42%;
+  }
+
+  .dark {
+    --background: 225 25% 8%;
+    --foreground: 210 20% 93%;
+
+    --card: 225 22% 11%;
+    --card-foreground: 210 20% 93%;
+
+    --popover: 225 22% 11%;
+    --popover-foreground: 210 20% 93%;
+
+    --primary: 187 100% 50%;
+    --primary-foreground: 225 30% 5%;
+
+    --secondary: 225 18% 16%;
+    --secondary-foreground: 210 20% 93%;
+
+    --muted: 225 18% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 330 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 18% 18%;
+    --input: 225 18% 18%;
+    --ring: 187 100% 50%;
+
+    --pulse-glow: 187 100% 55%;
+    --pulse-surface: 225 22% 13%;
+    --pulse-hover: 225 18% 18%;
+    --pulse-success: 152 69% 45%;
+    --pulse-warning: 38 92% 55%;
+    --pulse-online: 152 69% 50%;
+
+    --sidebar-background: 225 25% 10%;
+    --sidebar-foreground: 210 20% 93%;
+    --sidebar-primary: 187 100% 50%;
+    --sidebar-primary-foreground: 225 30% 5%;
+    --sidebar-accent: 225 18% 16%;
+    --sidebar-accent-foreground: 210 20% 93%;
+    --sidebar-border: 225 18% 18%;
+    --sidebar-ring: 187 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring ring-0;
+  }
+}
+
+@layer utilities {
+  .pulse-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .pulse-glow {
+    box-shadow: 0 0 20px hsl(var(--pulse-glow) / 0.3), 0 0 60px hsl(var(--pulse-glow) / 0.1);
+  }
+
+  .pulse-card {
+    @apply bg-card border border-border rounded-xl transition-colors;
+  }
+
+  .pulse-card:hover {
+    background: hsl(var(--pulse-hover));
+  }
+
+  .pulse-surface {
+    background: hsl(var(--pulse-surface));
+  }
+}

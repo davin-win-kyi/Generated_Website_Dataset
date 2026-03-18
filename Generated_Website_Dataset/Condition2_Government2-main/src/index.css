@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 210 60% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 80% 55%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 210 15% 93%;
+    --muted-foreground: 215 12% 48%;
+
+    --accent: 170 40% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 18% 87%;
+    --input: 210 18% 87%;
+    --ring: 210 60% 30%;
+
+    --radius: 0.5rem;
+
+    --gov-alert: 0 72% 50%;
+    --gov-alert-foreground: 0 0% 100%;
+    --gov-alert-bg: 45 100% 95%;
+    --gov-alert-border: 45 80% 55%;
+    --gov-success: 145 55% 38%;
+    --gov-success-foreground: 0 0% 100%;
+    --gov-info: 205 75% 48%;
+    --gov-info-foreground: 0 0% 100%;
+    --gov-hero: 210 55% 22%;
+    --gov-hero-foreground: 0 0% 100%;
+    --gov-surface: 210 20% 96%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 20% 92%;
+    --card: 215 25% 13%;
+    --card-foreground: 210 20% 92%;
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 210 55% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 70% 50%;
+    --secondary-foreground: 215 25% 10%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 210 12% 60%;
+    --accent: 170 40% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 210 55% 50%;
+    --gov-alert: 0 72% 50%;
+    --gov-alert-foreground: 0 0% 100%;
+    --gov-alert-bg: 0 50% 15%;
+    --gov-alert-border: 0 60% 40%;
+    --gov-success: 145 55% 38%;
+    --gov-success-foreground: 0 0% 100%;
+    --gov-info: 205 75% 48%;
+    --gov-info-foreground: 0 0% 100%;
+    --gov-hero: 210 50% 15%;
+    --gov-hero-foreground: 210 20% 92%;
+    --gov-surface: 215 22% 14%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+  }
+}
+
+@layer utilities {
+  .gov-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

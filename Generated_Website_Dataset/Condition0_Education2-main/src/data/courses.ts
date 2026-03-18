@@ -1,0 +1,88 @@
+import type { CourseData } from "@/components/edu-portal/CourseCard";
+import coursePython from "@/assets/course-python.jpg";
+import courseUx from "@/assets/course-ux.jpg";
+import courseData from "@/assets/course-data.jpg";
+import courseWebdev from "@/assets/course-webdev.jpg";
+import courseBusiness from "@/assets/course-business.jpg";
+import coursePhoto from "@/assets/course-photo.jpg";
+
+export const courses: CourseData[] = [
+  {
+    id: "python-data-science",
+    title: "Python for Data Science",
+    instructor: "Dr. Sarah Chen",
+    rating: 4.8,
+    reviewCount: 12450,
+    enrolled: 89340,
+    price: "$49.99",
+    duration: "24 hours",
+    level: "Intermediate",
+    category: "Data Science",
+    image: coursePython,
+  },
+  {
+    id: "ux-design-fundamentals",
+    title: "UX Design Fundamentals",
+    instructor: "Marcus Rivera",
+    rating: 4.7,
+    reviewCount: 8920,
+    enrolled: 65200,
+    price: "$39.99",
+    duration: "18 hours",
+    level: "Beginner",
+    category: "UX Design",
+    image: courseUx,
+  },
+  {
+    id: "data-analytics-masterclass",
+    title: "Data Analytics Masterclass",
+    instructor: "Prof. James Okafor",
+    rating: 4.9,
+    reviewCount: 15600,
+    enrolled: 102000,
+    price: "$59.99",
+    duration: "32 hours",
+    level: "Advanced",
+    category: "Data Science",
+    image: courseData,
+  },
+  {
+    id: "fullstack-web-dev",
+    title: "Full-Stack Web Development",
+    instructor: "Emily Zhang",
+    rating: 4.6,
+    reviewCount: 7200,
+    enrolled: 54800,
+    price: "$69.99",
+    duration: "40 hours",
+    level: "Intermediate",
+    category: "Web Development",
+    image: courseWebdev,
+  },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing Strategy",
+    instructor: "Alex Thompson",
+    rating: 4.5,
+    reviewCount: 5400,
+    enrolled: 41200,
+    price: "$34.99",
+    duration: "16 hours",
+    level: "Beginner",
+    category: "Business",
+    image: courseBusiness,
+  },
+  {
+    id: "photography-masterclass",
+    title: "Photography Masterclass",
+    instructor: "Lisa Nakamura",
+    rating: 4.8,
+    reviewCount: 9800,
+    enrolled: 72500,
+    price: "$44.99",
+    duration: "22 hours",
+    level: "Beginner",
+    category: "Photography",
+    image: coursePhoto,
+  },
+];
